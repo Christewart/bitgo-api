@@ -1,9 +1,9 @@
 import sbt._
 import Keys._
 
-object CoinPrismBuild extends Build { 
+object BitgoBuild extends Build {
  
-  val appName = "coinprism-api"
+  val appName = "bitgo-api"
   val appV = "0.1"
   val scalaV = "2.11.2"
   val akkaV = "2.3.6"
