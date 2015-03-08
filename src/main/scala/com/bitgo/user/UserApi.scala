@@ -1,4 +1,4 @@
-package user
+package com.bitgo.user
 
 import com.bitgo.environment.Environment
 import spray.client.pipelining._
@@ -15,14 +15,16 @@ trait UserApi { this : Environment =>
   import system._
 
   /**
-   * Get information about the current authenticated user.
+   * Get information about the current authenticated com.bitgo.user.
    * @return BitGoUser
    */
   def me : Future[BitGoUser]= {
     import BitGoUserProtocol._
+    val uri = host + apiPath + version + userPath + "me"
+    println(uri)
     val pipeline: HttpRequest => Future[BitGoUser] =
       addHeader("Authorization",token ) ~>
         sendReceive ~> unmarshal[BitGoUser]
-    pipeline(Get(host + apiPath + version + userPath + "me"))
+    pipeline(Get(uri))
   }
 }

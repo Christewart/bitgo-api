@@ -4,7 +4,6 @@ import com.bitgo.environment.Test
 import org.scalatest.FlatSpec
 import org.scalatest.MustMatchers
 import org.scalatest.concurrent.ScalaFutures
-import user.UserApi
 import scala.concurrent.duration.DurationInt
 import scala.language.postfixOps
 import com.bitgo.authentication.{BitGoEmail}

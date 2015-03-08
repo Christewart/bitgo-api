@@ -1,7 +1,6 @@
 package com.bitgo.authentication
 
 import spray.json.DefaultJsonProtocol
-import spray.httpx.SprayJsonSupport._
 /**
  * Created by chris on 3/6/15.
  */

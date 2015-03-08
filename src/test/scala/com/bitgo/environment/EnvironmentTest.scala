@@ -5,9 +5,10 @@ import org.scalatest.{FlatSpec, MustMatchers}
 /**
  * Created by chris on 3/6/15.
  */
-class EnvironmentTest extends FlatSpec with MustMatchers with Production with Test  {
+class EnvironmentTest extends FlatSpec with MustMatchers  {
   val production = new Production {}
   val test = new Test {}
+
 
   "Test" must "have the host" in {
     test.host must be ("https://test.bitgo.com/")
